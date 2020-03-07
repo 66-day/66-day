@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D406D8B4241380A400AF5CF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406D8B3241380A400AF5CF8 /* MainViewController.swift */; };
 		D48B2880241339040067C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48B287F241339040067C820 /* AppDelegate.swift */; };
 		D48B2882241339040067C820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48B2881241339040067C820 /* ContentView.swift */; };
 		D48B2884241339080067C820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48B2883241339080067C820 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D406D8B3241380A400AF5CF8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D48B287C241339040067C820 /* 66-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "66-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48B287F241339040067C820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48B2881241339040067C820 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				D48B287F241339040067C820 /* AppDelegate.swift */,
+				D406D8B3241380A400AF5CF8 /* MainViewController.swift */,
 				D48B2881241339040067C820 /* ContentView.swift */,
 				D48B2883241339080067C820 /* Assets.xcassets */,
 				D48B2888241339080067C820 /* Main.storyboard */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D406D8B4241380A400AF5CF8 /* MainViewController.swift in Sources */,
 				D48B2882241339040067C820 /* ContentView.swift in Sources */,
 				D48B2880241339040067C820 /* AppDelegate.swift in Sources */,
 			);

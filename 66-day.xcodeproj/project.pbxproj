@@ -13,6 +13,7 @@
 		D48B2884241339080067C820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48B2883241339080067C820 /* Assets.xcassets */; };
 		D48B2887241339080067C820 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48B2886241339080067C820 /* Preview Assets.xcassets */; };
 		D48B288A241339080067C820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48B2888241339080067C820 /* Main.storyboard */; };
+		D4A64B8B2417C8EB00A42C9C /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A64B8A2417C8EB00A42C9C /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D48B2889241339080067C820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D48B288B241339080067C820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48B288C241339080067C820 /* _6_day.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _6_day.entitlements; sourceTree = "<group>"; };
+		D4A64B8A2417C8EB00A42C9C /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D48B287F241339040067C820 /* AppDelegate.swift */,
 				D406D8B3241380A400AF5CF8 /* MainViewController.swift */,
 				D48B2881241339040067C820 /* ContentView.swift */,
+				D4A64B8A2417C8EB00A42C9C /* EventMonitor.swift */,
 				D48B2883241339080067C820 /* Assets.xcassets */,
 				D48B2888241339080067C820 /* Main.storyboard */,
 				D48B288B241339080067C820 /* Info.plist */,
@@ -151,6 +154,7 @@
 				D406D8B4241380A400AF5CF8 /* MainViewController.swift in Sources */,
 				D48B2882241339040067C820 /* ContentView.swift in Sources */,
 				D48B2880241339040067C820 /* AppDelegate.swift in Sources */,
+				D4A64B8B2417C8EB00A42C9C /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

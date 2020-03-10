@@ -33,10 +33,112 @@
 import Cocoa
 
 class MainViewController: NSViewController {
+    
+    let defaults = UserDefaults.standard
 
+    var lapsedDate = 0
+    var goalText = ""
+    
+    @IBOutlet var GoalTextInput: NSTextField!
+    @IBOutlet var GoalDateField: NSTextField!
+    @IBOutlet var CheckButton: NSButton!
+    @IBOutlet var RevertButton: NSButton!
+    @IBOutlet var ResetButton: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+
+        let goalTextTemp = defaults.string(forKey: "Goal")
+        lapsedDate = defaults.integer(forKey: "Date")
+        
+        if goalTextTemp == nil {
+            lapsedDate = 0
+            
+            GoalTextInput.isSelectable = true
+            GoalTextInput.isEditable = true
+            CheckButton.isEnabled = false
+            RevertButton.isEnabled = false
+            ResetButton.isEnabled = false
+            GoalTextInput.stringValue = ""
+            GoalDateField.stringValue = ""
+        } else {
+            goalText = goalTextTemp!
+            
+            GoalTextInput.isSelectable = false
+            GoalTextInput.isEditable = false
+            RevertButton.isEnabled = true
+            ResetButton.isEnabled = true
+            
+            GoalTextInput.stringValue = goalText
+            
+            if lapsedDate < 10 {
+                GoalDateField.stringValue = "0" + String(lapsedDate) + "/66"
+            } else {
+                GoalDateField.stringValue = String(lapsedDate) + "/66"
+            }
+        }
+    }
+    
+    @IBAction func CheckButtonClicked(_ sender: Any) {
+        if lapsedDate != 66 {
+            lapsedDate += 1
+
+            defaults.set(lapsedDate, forKey: "Date")
+            
+            if lapsedDate < 10 {
+                GoalDateField.stringValue = "0" + String(lapsedDate) + "/66"
+            } else {
+                GoalDateField.stringValue = String(lapsedDate) + "/66"
+            }
+        }
+    }
+    
+    @IBAction func RevertButtonClicked(_ sender: Any) {
+        if lapsedDate != 0 {
+            lapsedDate -= 1
+            
+            defaults.set(lapsedDate, forKey: "Date")
+            
+            if lapsedDate < 10 {
+                GoalDateField.stringValue = "0" + String(lapsedDate) + "/66"
+            } else {
+                GoalDateField.stringValue = String(lapsedDate) + "/66"
+            }
+        }
+    }
+    
+    @IBAction func GoalContentEntered(_ sender: Any) {
+        GoalTextInput.isSelectable = false
+        GoalTextInput.isEditable = false
+        CheckButton.isEnabled = true
+        RevertButton.isEnabled = true
+        ResetButton.isEnabled = true
+        
+        lapsedDate = 0
+        goalText = GoalTextInput.stringValue
+        
+        defaults.set(lapsedDate, forKey: "Date")
+        defaults.set(goalText, forKey: "Goal")
+        
+        if lapsedDate < 10 {
+            GoalDateField.stringValue = "0" + String(lapsedDate) + "/66"
+        } else {
+            GoalDateField.stringValue = String(lapsedDate) + "/66"
+        }
+    }
+    
+    @IBAction func ResetButtonClicked(_ sender: Any) {
+        lapsedDate = 0
+        defaults.set(lapsedDate, forKey: "Date")
+        defaults.set(nil, forKey: "Goal")
+        
+        GoalTextInput.isSelectable = true
+        GoalTextInput.isEditable = true
+        CheckButton.isEnabled = false
+        RevertButton.isEnabled = false
+        ResetButton.isEnabled = false
+        GoalTextInput.stringValue = ""
+        GoalDateField.stringValue = ""
     }
     
 }

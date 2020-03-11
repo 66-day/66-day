@@ -50,13 +50,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     let popover = NSPopover()
     
+    let menuItem = NSMenuItem()
+    let menu = NSMenu()
+    
     var eventMonitor: EventMonitor?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
-            button.action = #selector(togglePopover(_:))
+            button.action = #selector(doAction(_:))
+            button.sendAction(on: [.leftMouseDown, .rightMouseDown])
         }
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
@@ -66,18 +70,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         popover.contentViewController = MainViewController.freshController()
+        
+        menuItem.title = "Quit"
+        menuItem.action = #selector(quitButtonClicked(_:))
+        menu.addItem(menuItem)
+        
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     
-    @objc func togglePopover(_ sender: Any?) {
-        if popover.isShown {
-            closePopover(sender: sender)
-        } else {
-            showPopover(sender: sender)
+    @objc func doAction(_ sender: Any?) {
+        let event = NSApp.currentEvent!
+        
+        print(event.type.rawValue)
+
+        if event.type.rawValue == 1 {
+            if popover.isShown {
+                closePopover(sender: sender)
+            } else {
+                showPopover(sender: sender)
+            }
+        } else if event.type.rawValue == 3 {
+            menu.popUp(positioning: menuItem, at: NSEvent.mouseLocation, in: nil)
         }
+    }
+    
+    @objc func quitButtonClicked(_ sender: Any?) {
+        NSApplication.shared.terminate(self)
     }
 
     func showPopover(sender: Any?) {

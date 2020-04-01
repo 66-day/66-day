@@ -3,4 +3,4 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/66-day/66-day.svg)
 
 # 66-day
-Habits improvement application for macOS
+66 day habit form challenge application for macOS

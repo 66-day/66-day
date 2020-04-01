@@ -2,7 +2,7 @@
 [![HitCount](http://hits.dwyl.io/66-day/66-day.svg)](http://hits.dwyl.io/66-day/66-day)
 ![GitHub last commit](https://img.shields.io/github/last-commit/66-day/66-day.svg)
 
-# You can change your bad habbits
+# You can change your bad habits
 
 To change the habit, it is said that habits can be improved if the desired behavior is maintained for just 66 days.
 

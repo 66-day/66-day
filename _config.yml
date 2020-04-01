@@ -1,1 +1,11 @@
 theme: jekyll-theme-slate
+
+title: 66-day
+description: Habits improvement application for macOS
+
+show_downloads: true
+
+github:
+  zip_url: https://github.com/66-day/66-day/raw/master/66-day-download.zip
+  
+google_analytics: UA-133437630-5

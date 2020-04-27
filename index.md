@@ -10,10 +10,10 @@ Change Your Life with This App!
 
 ## Screenshots
 
-<a href="https://github.com/66-day/66-day/blob/master/screenshots/default.png?raw=true" style="background-color: black; width: 100%; height: 100%;">
-  <img src="https://github.com/66-day/66-day/blob/master/screenshots/default.png?raw=true" title="default-screenshot">
+<a href="https://github.com/66-day/66-day/blob/master/screenshots/default.png?raw=true" style="background-color: black">
+  <img src="https://github.com/66-day/66-day/blob/master/screenshots/default.png?raw=true" width=100% title="default">
 </a>
 
-<a href="https://github.com/66-day/66-day/blob/master/screenshots/usage.png?raw=true" style="background-color: black; width: 100%; height: 100%;">
-  <img src="https://github.com/66-day/66-day/blob/master/screenshots/usage.png?raw=true" title="usage-screenshot">
+<a href="https://github.com/66-day/66-day/blob/master/screenshots/usage.png?raw=true" style="background-color: black">
+  <img src="https://github.com/66-day/66-day/blob/master/screenshots/usage.png?raw=true" width=100% title="usage">
 </a>
